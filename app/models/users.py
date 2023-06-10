@@ -32,4 +32,16 @@ class UserSchema(BaseModel):
     last_name: constr(min_length=4, max_length=15) = Field(
         ..., description="Last name of the user"
     )
-    password: str
+    password: constr(min_length=8)
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "first_name": "Axell",
+                "last_name": "Solis",
+                "email": "axell@example.com",
+                "phone": 5542771463,
+                "password": "test1234"
+            }
+        }
+
