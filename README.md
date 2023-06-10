@@ -44,7 +44,7 @@ git clone https://github.com/axelldev/backend-tecnico.git
 ```bash
 cd backend-tecnico
 
-python -m venv venv 
+python -m venv venv
 
 source venv/bin/activate # for linux, macos
 
@@ -55,13 +55,22 @@ source venv/Scripts/activate # Windows git bash
 pip install -r requirements.txt
 ```
 
-2. To initialize the app use docker _make shure you have open docker desktop
+2. Set up the envionment variables on a .env file
+
+```bash
+MONGO_INITDB_ROOT_USERNAME=<username>
+MONGO_INITDB_ROOT_PASSWORD=<password>
+DEV_CONN_STRING=mongodb://<username>:<password>@database:27017/?authMechanism=DEFAULT
+TEST_CONN_STRING=mongodb://<username>:<password>@databasetest:27017/?authMechanism=DEFAULT
+```
+
+3. To initialize the app use docker \_make shure you have open docker desktop
 
 ```bash
 docker compose up
 ```
 
-3. Access to the ip of the api
+4. Access to the ip of the api
 
 ```
 http://127.0.0.1:8000/
@@ -70,9 +79,11 @@ http://127.0.0.1:8000/
 ## Testing
 
 1. To run the tests you have to run this command
+
 ```
 docker compose -f docker-compose.test.yml up
 ```
+
 And you will se the output of the tests
 
 ![Alt text](image.png)
@@ -84,5 +95,6 @@ And you will se the output of the tests
 - [Portfolio](https://axell-software-developer.netlify.app/)
 
 ---
+
 Thank you for giving me the opportunity to be in this process ❤️.
 Happy Code! 💻
