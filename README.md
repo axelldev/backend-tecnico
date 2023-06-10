@@ -55,7 +55,7 @@ source venv/Scripts/activate # Windows git bash
 pip install -r requirements.txt
 ```
 
-2. Set up the envionment variables on a .env file
+2. Set up the envionment variables on a .env file on the root of the project folder
 
 ```bash
 MONGO_INITDB_ROOT_USERNAME=<username>
@@ -64,7 +64,7 @@ DEV_CONN_STRING=mongodb://<username>:<password>@database:27017/?authMechanism=DE
 TEST_CONN_STRING=mongodb://<username>:<password>@databasetest:27017/?authMechanism=DEFAULT
 ```
 
-3. To initialize the app use docker \_make shure you have open docker desktop
+3. To initialize the app use docker make shure you have open docker desktop
 
 ```bash
 docker compose up
