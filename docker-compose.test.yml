@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  backend_tecnico_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./app:/app
+    environment:
+      - CONNECTION_STRING=${TEST_CONN_STRING}
+    env_file:
+      - .env
+
+
+  databasetest:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+    env_file:
+      - .env
+    command: mongod --quiet --logpath /dev/null
