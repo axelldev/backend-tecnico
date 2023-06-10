@@ -32,26 +32,57 @@ To list all the stored users yo can make a `GET` request to `users` endopint.
 ## Installation
 
 1. Clone this repository
+
 ```bash
-git clone 
+git clone https://github.com/axelldev/backend-tecnico.git
 ```
 
 ## Usage
 
-Instructions on how to use the project, including examples and common use cases. You can provide code snippets or commands to demonstrate how to interact with the project.
+1. First create a virtual virtual environment to install the dependencies
+
+```bash
+cd backend-tecnico
+
+python -m venv venv 
+
+source venv/bin/activate # for linux, macos
+
+source venv/Scripts/activate # Windows git bash
+
+./venv/Scripts/activate # Windows
+
+pip install -r requirements.txt
+```
+
+2. To initialize the app use docker _make shure you have open docker desktop
+
+```bash
+docker compose up
+```
+
+3. Access to the ip of the api
+
+```
+http://127.0.0.1:8000/
+```
 
 ## Testing
 
-Explain how to run the automated tests for the project. You can provide instructions on setting up the testing environment, including any required test databases or other services.
+1. To run the tests you have to run this command
+```
+docker compose -f docker-compose.test.yml up
+```
+And you will se the output of the tests
 
-## Contributing
-
-Outline how contributors can contribute to the project. You can include guidelines for issue submission and pull requests.
-
-## License
-
-Specify the license under which the project is distributed. Make sure to include the full text of the license or a link to it.
+![Alt text](image.png)
 
 ## Contact
 
-Contact information for questions, comments, or further collaboration. You can provide links to social media profiles, emails, or any other form of contact.
+- [GitHub](https://github.com/axelldev/backend-tecnico)
+- [LinkedIn](https://www.linkedin.com/in/axell2552/)
+- [Portfolio](https://axell-software-developer.netlify.app/)
+
+---
+Thank you for giving me the opportunity to be in this process ❤️.
+Happy Code! 💻
